@@ -9,4 +9,4 @@ repository = "https://github.com/freshjuice-dev/zed-hubl"
 [grammars.hubl]
 repository = "https://github.com/freshjuice-dev/zed-hubl"
 path = "grammar"
-rev = "v1.0.0"
+rev = "a62aaaf892904fac6d6bbeea79ccd674f1ddb785"
