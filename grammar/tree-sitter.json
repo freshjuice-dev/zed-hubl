@@ -1,0 +1,30 @@
+{
+  "grammars": [
+    {
+      "name": "hubl",
+      "camelcase": "HubL",
+      "scope": "source.hubl",
+      "injection-regex": "^hubl$",
+      "file-types": ["hubl"],
+      "path": "."
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "license": "MIT",
+    "description": "Tree-sitter grammar for HubL (HubSpot templating language) with spaced-filter and ternary support",
+    "authors": [
+      {
+        "name": "Alex Zappa",
+        "email": "alex@zappa.dev"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/freshjuice-dev/zed-hubl"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "node": true
+  }
+}

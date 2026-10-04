@@ -1,0 +1,12 @@
+id = "freshjuice-hubl"
+name = "HubSpot HubL by FreshJuice"
+description = "HubL syntax highlighting for HubSpot templates"
+version = "1.0.0"
+schema_version = 1
+authors = ["Alex Zappa @ FreshJuice.dev"]
+repository = "https://github.com/freshjuice-dev/zed-hubl"
+
+[grammars.hubl]
+repository = "https://github.com/freshjuice-dev/zed-hubl"
+path = "grammar"
+rev = "v1.0.0"

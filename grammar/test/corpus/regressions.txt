@@ -1,0 +1,146 @@
+================================================================================
+Filters allow whitespace after the pipe
+================================================================================
+
+{{ content.name | upper }}
+{{ a | b | c }}
+{% set output = output | regex_replace("[\t\n\f\r ]", "-") -%}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (content)
+  (expression
+    (expression_begin)
+    (whitespace)
+    (identifier)
+    (attribute
+      (identifier))
+    (whitespace)
+    (filter
+      (whitespace)
+      (identifier))
+    (whitespace)
+    (expression_end))
+  (content)
+  (expression
+    (expression_begin)
+    (whitespace)
+    (identifier)
+    (whitespace)
+    (filter
+      (whitespace)
+      (identifier))
+    (whitespace)
+    (filter
+      (whitespace)
+      (identifier))
+    (whitespace)
+    (expression_end))
+  (content)
+  (statement
+    (statement_begin)
+    (keyword)
+    (whitespace)
+    (identifier)
+    (whitespace)
+    (assignment_operator)
+    (whitespace)
+    (identifier)
+    (whitespace)
+    (filter
+      (whitespace)
+      (identifier))
+    (punctuation)
+    (string)
+    (punctuation)
+    (whitespace)
+    (string)
+    (punctuation)
+    (whitespace)
+    (statement_end))
+  (content))
+
+================================================================================
+Ternary expressions
+================================================================================
+
+{{ a ? b : c }}
+{{ loop.last ? null : "," }}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (content)
+  (expression
+    (expression_begin)
+    (whitespace)
+    (identifier)
+    (whitespace)
+    (punctuation)
+    (whitespace)
+    (identifier)
+    (whitespace)
+    (punctuation)
+    (whitespace)
+    (identifier)
+    (whitespace)
+    (expression_end))
+  (content)
+  (expression
+    (expression_begin)
+    (whitespace)
+    (identifier)
+    (attribute
+      (identifier))
+    (whitespace)
+    (punctuation)
+    (whitespace)
+    (none)
+    (whitespace)
+    (punctuation)
+    (whitespace)
+    (string)
+    (whitespace)
+    (expression_end))
+  (content))
+
+================================================================================
+Nested expression inside statement, negation operator
+================================================================================
+
+{%- module "m" path="../x", no_wrapper={{ !is_in_editor }}, export_to_template_context=True -%}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (content)
+  (statement
+    (statement_begin)
+    (keyword)
+    (whitespace)
+    (string)
+    (whitespace)
+    (identifier)
+    (assignment_operator)
+    (string)
+    (punctuation)
+    (whitespace)
+    (identifier)
+    (assignment_operator)
+    (expression
+      (expression_begin)
+      (whitespace)
+      (operator)
+      (operator)
+      (identifier)
+      (whitespace)
+      (expression_end))
+    (punctuation)
+    (whitespace)
+    (identifier)
+    (assignment_operator)
+    (boolean)
+    (whitespace)
+    (statement_end))
+  (content))

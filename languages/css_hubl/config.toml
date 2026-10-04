@@ -1,0 +1,6 @@
+name = "CSS + HubL"
+grammar = "hubl"
+path_suffixes = ["hubl.css"]
+block_comment = ["{#", "#}"]
+tab_size = 2
+hard_tabs = false

@@ -1,0 +1,6 @@
+# Zed build artifacts
+grammars/*.wasm
+grammars/hubl/
+
+# macOS
+.DS_Store

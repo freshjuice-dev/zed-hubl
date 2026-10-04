@@ -1,0 +1,6 @@
+name = "HubL"
+grammar = "hubl"
+path_suffixes = ["hubl"]
+block_comment = ["{#", "#}"]
+tab_size = 2
+hard_tabs = false
